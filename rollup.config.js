@@ -3,11 +3,12 @@ import node from "rollup-plugin-node-resolve";
 
 export default {
   input: "index",
-  extend: true,
   plugins: [node(), ascii()],
   output: {
-    file: "build/d3.js",
+    extend: true,
+    file: "dist/d3.js",
     format: "umd",
+    indent: false,
     name: "d3"
   }
 };
